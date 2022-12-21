@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Present;
 
 class PresentsController extends Controller
 {
@@ -14,7 +15,8 @@ class PresentsController extends Controller
      */
     public function index()
     {
-        //
+        $presents = Present::all();
+        return view('presents.index', compact('presents'));
     }
 
     /**
@@ -24,7 +26,7 @@ class PresentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('presents.create');
     }
 
     /**
@@ -35,7 +37,9 @@ class PresentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+        $new_present = Present::create($form_data);
+        return redirect()->route('presents.show', $new_present->id);
     }
 
     /**
@@ -44,9 +48,9 @@ class PresentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Present $present)
     {
-        //
+        return view('presents.show', compact('present'));
     }
 
     /**
@@ -57,7 +61,7 @@ class PresentsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('presents.edit', compact('present'));
     }
 
     /**
@@ -69,7 +73,19 @@ class PresentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $present = Present::find($id);
+        $form_data = $request->all();
+        $present->name = $form_data['name'];
+        $present->cognome = $form_data['cognome'];
+        $present->citta = $form_data['citta'];
+        $present->indirizzo = $form_data['indirizzo'];
+        $present->n_regalo = $form_data['n_regalo'];
+        $present->code_spedizione = $form_data['code_spedizione'];
+        $present->camino = $form_data['camino'];
+        $present->status = $form_data['status'];
+        $present->desc_regalo = $form_data['desc_regalo'];
+        $present->update();
+        return redirect()->route('present.show', $present->id);
     }
 
     /**
@@ -78,8 +94,9 @@ class PresentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Present $present)
     {
-        //
+        $present->delete();
+        return redirect()->route('present.index');
     }
 }
