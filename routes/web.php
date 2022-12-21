@@ -16,5 +16,5 @@ use App\Http\Controllers\Guest\PresentsController as PresentsController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 Route::resource('presents', PresentsController::class);

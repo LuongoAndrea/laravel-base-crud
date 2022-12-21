@@ -16,7 +16,11 @@
 </head>
 
 <body>
-    @include('partials.header')
+    <header>
+        @include('partials.header')
+    </header>
+
+    @include('partials.jumbo')
     <main>
         @yield('content')
     </main>

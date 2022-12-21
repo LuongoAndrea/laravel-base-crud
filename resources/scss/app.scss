@@ -1,1 +1,44 @@
-@import '~bootstrap/scss/bootstrap'
+@use '../scss/__variables' as *;
+@import '~bootstrap/scss/bootstrap';
+
+#jumbo{
+    background-image: url('../img/vecteezy_christmas-background-with-xmas-concept-and-sparkle-bokeh_6973054_96.jpg');
+    background-size: cover;
+    height: 60vh;
+  position:relative;
+  filter:blur(4px);
+    // -webkit-filter: blur(4px);
+    
+    
+}
+.bg-text{
+    background-color: rgba(0, 0, 0, 0.977); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.483); /* Black w/opacity/see-through */
+    color: $sky-blue;
+    font-weight: bold;
+    border: 3px solid $gold;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+.logo-box{
+    padding: 10px;
+    a{
+        img{
+            width: 70px;
+           } 
+    }
+   
+}
+header{
+background-color: $azzure;
+position: fixed;
+width:100%;
+z-index:1000;
+}
