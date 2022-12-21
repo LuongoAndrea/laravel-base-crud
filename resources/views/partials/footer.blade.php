@@ -1,1 +1,7 @@
-<h1>footer</h1>
+<footer>
+    <div class="snow">
+        <div class="text-white">
+
+        </div>
+    </div>
+</footer>

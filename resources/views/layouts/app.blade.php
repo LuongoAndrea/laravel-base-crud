@@ -15,15 +15,25 @@
 
 </head>
 
-<body>
+<body class=>
+
     <header>
         @include('partials.header')
     </header>
 
     @include('partials.jumbo')
     <main>
-        @yield('content')
+        <div>
+            @yield('content')
+        </div>
+
+
+
+
+
+
     </main>
+
     @include('partials.footer')
 
 </body>

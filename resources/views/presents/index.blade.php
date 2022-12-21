@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="container">
+    <section class="container ">
         <h1>regali</h1>
         <div class="row">
             @foreach ($presents as $present)
