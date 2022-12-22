@@ -37,7 +37,10 @@ class PresentsController extends Controller
      */
     public function store(Request $request)
     {
+
         $form_data = $request->all();
+
+        //dd($form_data);
         $new_present = Present::create($form_data);
         return redirect()->route('presents.show', $new_present->id);
     }

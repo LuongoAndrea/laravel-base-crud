@@ -17,7 +17,8 @@
                 </a>
             </li>
             <li class="nav-item mx-3">
-                <a class="{{ Route::currentRouteName() == 'edit' ? 'active' : '' }}" href="{{ route('welcome') }}">
+                <a class="{{ Route::currentRouteName() == 'edit' ? 'active' : '' }}"
+                    href="{{ route('presents.create') }}">
                     Scrivi A babbo Natale
                 </a>
             </li>
