@@ -15,9 +15,13 @@
             <h1 style="font-size:50px"> tour babbo natale</h1>
             <p>Circo Polare artico a circa 8KM da Rovaniemi</p>
         @endif
+
         @if (Route::currentRouteName() == 'welcome')
-            <h1 style="font-size:50px">WELCOME babbo natale</h1>
-            <p>Circo Polare artico a circa 8KM da Rovaniemi</p>
+            <h1 style="font-size:50px">Benvenuti al sito ufficiale di Babbo Natale</h1>
+            <h4 class="text-white fw-bold">Su questo sito hai la possibilit&agrave; di scrivere la tua letterina a babbo
+                natale
+                inizia subito !!!
+            </h4>
         @endif
 
 

@@ -16,9 +16,20 @@
                     <br>
                     {{ $present->code_spedizione }}
                     <br>
-                    {{ $present->camino }}
+                    @if ($present->camino)
+                        presente
+                    @else
+                        assente
+                    @endif
+
                     <br>
-                    {{ $present->status }}
+                    @if ($present->status)
+                        buono
+                    @else
+                        cattivo
+                    @endif
+
+
                     <br>
 
 

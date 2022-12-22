@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
-    <section class="container ">
-        <h1>regali</h1>
+    <section class="container py-5 ">
+
         <div class="row">
+            {{-- col-sm-6 col-md-4 --}}
             @foreach ($presents as $present)
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="col-4  mb-4">
                     <div class="card-body">
                         <img class="my-gif" src="{{ Vite::asset('/resources/img/icons8-tempesta-di-neve.gif') }}"
                             alt="">
@@ -16,13 +17,13 @@
                         <hr>
                         <h1 class="mb-4 card-title">{{ $present->name }} {{ $present->cognome }}</h1>
                         <hr>
-                        <h4 class="mb-2">citta : {{ $present->citta }} </h4>
-                        <h4 class="mb-2">indirizzo : {{ $present->indirizzo }} </h4>
+                        {{-- <h4 class="mb-2">citta : {{ $present->citta }} </h4>
+                        <h4 class="mb-2 max-ind">indirizzo : {{ $present->indirizzo }} </h4>
                         <h4 class="mb-2">numeri regali : {{ $present->n_regalo }} </h4>
                         <h4 class="mb-2">codice spedizione : {{ $present->code_spedizione }} </h4>
                         <h4 class="mb-2">camino : {{ $present->camino }} </h4>
                         <h4 class="mb-2">status : {{ $present->status }} </h4>
-                        <h4>regalo : {{ $present->desc_regalo }}</h4>
+                        <h4>regalo : {{ $present->desc_regalo }}</h4> --}}
 
                         <div id="" class=" my-2 align-items-center position-relative">
 

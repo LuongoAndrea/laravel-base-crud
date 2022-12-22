@@ -26,7 +26,8 @@
     </header>
 
     @include('partials.jumbo')
-    <main>
+
+    <main class="bg-danger">
         <div>
             @yield('content')
         </div>
