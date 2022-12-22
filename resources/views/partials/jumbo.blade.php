@@ -8,8 +8,7 @@
             <p>Circo Polare artico a circa 8KM da Rovaniemi</p>
         @endif
         @if (Route::currentRouteName() == 'presents.create')
-            <h1 style="font-size:50px">CREATE babbo natale</h1>
-            <p>Circo Polare artico a circa 8KM da Rovaniemi</p>
+            <h1 style="font-size:50px">Inizia subito a scrivere la lettera per Babbo Natale</h1>
         @endif
         @if (Route::currentRouteName() == 'tour')
             <h1 style="font-size:50px"> tour babbo natale</h1>

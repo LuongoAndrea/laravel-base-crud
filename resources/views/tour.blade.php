@@ -1,4 +1,14 @@
 @extends('layouts.app')
 @section('content')
-    tourpage
+    <div class="container">
+        <section>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </section>
+
+    </div>
 @endsection
