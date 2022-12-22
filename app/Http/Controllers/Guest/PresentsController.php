@@ -62,7 +62,7 @@ class PresentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Present $present)
     {
         return view('presents.edit', compact('present'));
     }
@@ -88,7 +88,8 @@ class PresentsController extends Controller
         $present->status = $form_data['status'];
         $present->desc_regalo = $form_data['desc_regalo'];
         $present->update();
-        return redirect()->route('present.show', $present->id);
+        // dd($present);
+        return redirect()->route('presents.show', $present->id);
     }
 
     /**
@@ -100,6 +101,6 @@ class PresentsController extends Controller
     public function destroy(Present $present)
     {
         $present->delete();
-        return redirect()->route('present.index');
+        return redirect()->route('presents.index');
     }
 }

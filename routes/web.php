@@ -19,3 +19,6 @@ Route::get('/', function () {
 })->name('welcome');
 Route::resource('presents', PresentsController::class);
 //Route::resource()
+Route::get('/tour', function () {
+    return view('tour');
+})->name('tour');
