@@ -15,7 +15,7 @@
                     </div>
                     <div class="blog-slider__content">
                         <ul>
-                            <li class="my-list">Nome Cognome:
+                            <li class="my-list">Nome & Cognome:
                                 {{ $present->name }} {{ $present->cognome }}
                             </li>
                             <li class="my-list">Regalo:
@@ -30,6 +30,7 @@
                             <li class="my-list">Numero di regali:
                                 {{ $present->n_regalo }}
                             </li>
+
                             <li class="my-list">Code-sped:
                                 {{ $present->code_spedizione }}
                             </li>
