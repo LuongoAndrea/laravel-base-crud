@@ -3,55 +3,67 @@
     <div class="py-5">
         <div class="container bg-form d-flex justify-content-center align-items-center ">
             <div class='col-6 me-3 '>
-                <form action="{{ route('presents.store') }}" method="POST" class="">
+                <form action="{{ route('presents.update', $present->id) }}" method="POST" class="">
                     @csrf
-                    <h1 class="title-form mt-4">Crea la tua lettera</h1>
+                    @method('PUT')
+                    <h1 class="title-form mt-4">Modifica la tua lettera</h1>
                     <div class="">
                         <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <input type="text" class="form-control" id="name" name="name"
+                            value="{{ old('name', $present->name) }}">
                     </div>
                     <div class="">
                         <label for="cognome" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="cognome" name="cognome">
+                        <input type="text" class="form-control" id="cognome" name="cognome"
+                            value="{{ old('cognome', $present->cognome) }}">
                     </div>
                     <div class="">
                         <label for="citta" class="form-label">Città </label>
-                        <input type="text" class="form-control" id="citta" name="citta" placeholder="1234 Main St">
+                        <input type="text" class="form-control" id="citta" name="citta"
+                            value="{{ old('citta', $present->citta) }}">
                     </div>
                     <div class="">
                         <label for="indirizzo" class="form-label">Indirizzo</label>
                         <input type="text" class="form-control" id="indirizzo" name="indirizzo"
-                            placeholder="Apartment, studio, or floor">
+                            value="{{ old('indirizzo', $present->indirizzo) }}">
                     </div>
                     <div class="">
                         <label for="n_regalo" class="form-label">Numero di regalo </label>
-                        <input type="text" class="form-control" id="n_regalo" name="n_regalo">
+                        <input type="text" class="form-control" id="n_regalo"
+                            name="n_regalo"value="{{ old('n_regalo', $present->n_regalo) }}">
                     </div>
                     <div class="">
                         <label for="code_spedizione" class="form-label">codice spedizione </label>
-                        <input type="text" class="form-control" id="code_spedizione" name="code_spedizione">
+                        <input type="text" class="form-control" id="code_spedizione"
+                            name="code_spedizione"value="{{ old('code_spedizione', $present->code_spedizione) }}">
                     </div>
                     <div class="">
                         <label for="camino" class="form-label">Camino</label>
                         <select id="camino" name="camino" class="form-select">
-                            <option value="1" selected>Si</option>
-                            <option value="0">No</option>
+                            <option value="1" selected
+                                value="{{ old('camino', $present->camino == '1' ? 'selected' : '') }}">Si</option>
+                            <option value="0" value="{{ old('camino', $present->camino == '0' ? 'selected' : '') }}">No
+                            </option>
                         </select>
                     </div>
                     <div class="">
                         <label for="status" class="form-label">cattivo?</label>
                         <select id="status" name="status" class="form-select">
-                            <option value="1" selected>Si</option>
-                            <option value="0">No</option>
+                            <option value="1" selected
+                                value="{{ old('status', $present->status == '1' ? 'selected' : '') }}">Si</option>
+                            <option value="0" value="{{ old('status', $present->status == '0' ? 'selected' : '') }}">
+                                No
+                            </option>
                         </select>
                     </div>
                     <div class="">
                         <label for="desc_regalo" class="form-label">Nome gioco </label>
-                        <input type="text" class="form-control" id="desc_regalo" name="desc_regalo">
+                        <input type="text" class="form-control" id="desc_regalo" name="desc_regalo"
+                            value="{{ old('desc_regalo', $present->desc_regalo) }}">
                     </div>
                     <div class="d-flex justify-content-center py-5">
                         <a class="button-form me-5" href="{{ route('presents.index') }}">Vai indietro</a>
-                        <button type="submit" class="button-form">Crea un regalo</button>
+                        <button type="submit" class="button-form"> modifica regalo</button>
                     </div>
                 </form>
             </div>

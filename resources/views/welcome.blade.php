@@ -19,6 +19,12 @@
                     &ensp;
                     <div id="seconds"></div>
                 </div>
+                <div class="text-center mb-5 mt-5">
+                    <a href="{{ route('presents.create') }}">
+                        <button class=" button-form mt-4 mb-4">Scrivi una letterina</button>
+                    </a>
+
+                </div>
             </div>
         </div>
     </div>
