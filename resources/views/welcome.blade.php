@@ -2,6 +2,7 @@
 @section('content')
     <div class='welcome-div py-3'>
 
+
         <div class="container">
 
             <div class="mt-5">
@@ -27,6 +28,7 @@
                 </div>
             </div>
         </div>
+        <audio autoplay src={{ URL::asset('../sound/Wham_-_Last_Christmas_Official_Video.mp3') }}></audio>
     </div>
     <script>
         function calculateChristmasCountdown() {

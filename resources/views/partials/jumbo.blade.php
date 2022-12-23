@@ -1,6 +1,12 @@
 <div class='jumbocontainer'>
     <div id='jumbo'>
-
+        <div class="jumbo-video">
+            <div class="video-absolute">
+                <video style="width:100%;height:100%" autoplay loop controls>
+                    <source src="{{ URL::asset('../videos/BuonAnno-3565.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </div>
     <div class="bg-text">
         @if (Str::contains(Route::currentRouteName(), 'presents.show'))

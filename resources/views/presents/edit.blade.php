@@ -47,7 +47,7 @@
                         </select>
                     </div>
                     <div class="">
-                        <label for="status" class="form-label">cattivo?</label>
+                        <label for="status" class="form-label">Sei stato buono ?</label>
                         <select id="status" name="status" class="form-select">
                             <option value="1" selected
                                 value="{{ old('status', $present->status == '1' ? 'selected' : '') }}">Si</option>

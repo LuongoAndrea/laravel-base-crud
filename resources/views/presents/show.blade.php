@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container p-5">
+    <div class="container edit-alt p-5">
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
                 <div class="blog-slider__item swiper-slide mt-5">
@@ -48,40 +48,15 @@
                                 @endif
                             </li>
                         </ul>
+
                         <img class="my-gif2" src="{{ Vite::asset('../../img/santa-claus-26.gif') }}" alt="">
                     </div>
                 </div>
+                <div class="d-flex justify-content-center mt-4 py-5">
+                    <a class="button-form me-5" href="{{ route('presents.index') }}">Torna alla lista</a>
+                </div>
             </div>
         </div>
-        {{-- <div class="d-flex bg-white">
-            <div class="col-6">
-                <img src="{{ Vite::asset('/resources/img/regalino.png') }}" class="card-img-top" alt="{{ $present->name }}">
-            </div>
-            <div class="col-6">
-                <ul>
-                    <li>{{ $present->name }} {{ $present->cognome }}</li>
-                    <li>{{ $present->desc_regalo }}</li>
-                    <li>{{ $present->citta }}</li>
-                    <li>{{ $present->indirizzo }}</li>
-                    <li>{{ $present->n_regalo }}</li>
-                    <li>{{ $present->code_spedizione }}</li>
-                    <li>
-                        @if ($present->camino)
-                            presente
-                        @else
-                            assente
-                        @endif
-                    </li>
-                    <li>
-                        @if ($present->status)
-                            buono
-                        @else
-                            cattivo
-                        @endif
-                    </li>
-                </ul>
-            </div>
 
-        </div> --}}
     </div>
 @endsection
