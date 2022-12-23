@@ -7,7 +7,7 @@
             @foreach ($presents as $present)
                 <div class="col-4  mb-4">
                     <div class="card-body">
-                        <img class="my-gif" src="{{ Vite::asset('/resources/img/icons8-tempesta-di-neve.gif') }}"
+                        <img class="my-gif" src="{{ Vite::asset('/resources/img/christmas-elf-unscreen.gif') }}"
                             alt="">
                         <div class="text-center">
                             <img src="{{ Vite::asset('/resources/img/regalino.png') }}"
@@ -17,13 +17,7 @@
                         <hr>
                         <h1 class="mb-4 card-title">{{ $present->name }} {{ $present->cognome }}</h1>
                         <hr>
-                        {{-- <h4 class="mb-2">citta : {{ $present->citta }} </h4>
-                        <h4 class="mb-2 max-ind">indirizzo : {{ $present->indirizzo }} </h4>
-                        <h4 class="mb-2">numeri regali : {{ $present->n_regalo }} </h4>
-                        <h4 class="mb-2">codice spedizione : {{ $present->code_spedizione }} </h4>
-                        <h4 class="mb-2">camino : {{ $present->camino }} </h4>
-                        <h4 class="mb-2">status : {{ $present->status }} </h4>
-                        <h4>regalo : {{ $present->desc_regalo }}</h4> --}}
+
 
                         <div id="" class=" my-2 align-items-center position-relative">
 
@@ -36,13 +30,19 @@
                                     <button class="tuono_button my-3 tuono_btn_r"><i
                                             class="fa-solid fa-wand-magic-sparkles"></i></button>
                                 </a>
-                                <form action="{{ route('presents.destroy', $present->id) }}" class="" method="POST">
+                                <button class="tuono_button my-3 tuono_btn_r btn-modal"><i
+                                        class="ms-1 fa-solid fa-trash "></i></button>
+
+
+
+                                {{-- <form action=" {{ route('presents.destroy', $present->id) }} " class=""
+                                    method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button class="tuono_button my-3 tuono_btn_r"><i
                                             class="ms-1 fa-solid fa-trash"></i></button>
-                                </form>
-
+                                </form> --}}
+                                {{-- --}}
                             </div>
 
                         </div>
@@ -54,18 +54,23 @@
 
 
 
+                </div>
+                <div id="" class="modal-modal myModal-modal">
 
-                    {{--
-                            <a href="{{ route('presents.show', $present->id) }}" class="btn btn-primary">Scopri!</a>
-                            <a href="{{ route('presents.edit', $present->id) }}" class="btn btn-primary ms-3">Modifica</a>
-                            <form action="{{ route('presents.destroy', $present->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger ms-3">Cancella</button>
-                            </form>
+                    <!-- Modal content -->
+                    <div class="modal-modal-content">
+                        <span class="close-modal">CHIUDITI </span>
+                        <br>
+                        <form action="{{ route('presents.destroy', $present->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <div class="title-delete">sei sicuro di eliminare : <strong>{{ $present->desc_regalo }}
+                                </strong></div>
+                            <button type="submit" class='btncancella mt-3 btn btn-danger'>cancella</button>
 
-                        </div>
-                    </div> --}}
+                        </form>
+                    </div>
+
                 </div>
             @endforeach
 

@@ -25,7 +25,7 @@
                     </div>
                     <div class="">
                         <label for="n_regalo" class="form-label">Numero di regalo </label>
-                        <input type="text" class="form-control" id="n_regalo" name="n_regalo">
+                        <input type="number" class="form-control" id="n_regalo" name="n_regalo">
                     </div>
                     <div class="">
                         <label for="code_spedizione" class="form-label">codice spedizione </label>
