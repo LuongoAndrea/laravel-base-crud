@@ -18,7 +18,7 @@ return [
         //     "active" => false,
         // ],
         [
-            "text" => "tour guidato",
+            "text" => "storia di Babbo Natale",
             "url" => "tour",
             "active" => false,
         ],

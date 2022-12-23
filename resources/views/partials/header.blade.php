@@ -5,7 +5,7 @@ $links = config('navfoolink.navbar');
 <div class="container  d-flex justify-content-center align-items-center">
     <div class="logo-box">
         <a href="{{ route('welcome') }}">
-            <img src="{{ Vite::asset('/resources/img/santa-claus-dabbing-dance-vector.png') }}" alt="logo-site">
+            <img src="{{ Vite::asset('/resources/img/babbo_dabbing.gif') }}" alt="logo-site">
         </a>
     </div>
     <nav class="navbar-nav container navbar-light ">

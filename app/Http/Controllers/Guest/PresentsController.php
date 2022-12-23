@@ -11,11 +11,24 @@ class PresentsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * 
      */
-    public function index()
+    public function index(Request $request)
     {
-        $presents = Present::all();
+        // if (!isset($request->query("search"))) {
+        $status =  $request->query("search");
+
+        // dd($status);
+        if (isset($status)) {
+
+
+            $presents = Present::where('status', $status)->get();
+            // dd($presents);
+        } else {
+            $presents = Present::all();
+        }
+
+
         return view('presents.index', compact('presents'));
     }
 
